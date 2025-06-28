@@ -10,6 +10,15 @@ const projects = [
     githubLink: "",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
+  {
+    name: "HotelApp",
+    year: "2022",
+    description:
+      "A web and desktop application for managing hotel operations, including guest management, room bookings, check-ins, and real-time room availability",
+    siteLink: "",
+    githubLink: "https://github.com/lawrence-valerio/HotelApp",
+    techStack: [".NET", "C#", "SQL", "ASP.NET Core"],
+  },
 ];
 
 export const ProjectSection = () => {
@@ -18,17 +27,35 @@ export const ProjectSection = () => {
       <div className="mx-auto max-w-screen-sm py-3 px-6 darkmode-bg">
         <hr className="border-t border-gray-400 my-10" />
         <h2 className="text-xl font-bold">Projects</h2>
-        {/* */}
         <div className="mt-7">
           {projects.map((project) => (
-            <div key={project.name} className="flex flex-col md:flex-row">
+            <div key={project.name} className="flex flex-col md:flex-row mt-6">
               <p className="min-w-28 text-sm">{project.year}</p>
               <div className="flex flex-wrap">
-                <p className="underline underline-offset-5">{project.name}</p>
+                {project.siteLink ? (
+                  <a
+                    href={project.siteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-5"
+                  >
+                    {project.name}
+                  </a>
+                ) : (
+                  <p>{project.name}</p>
+                )}
                 {project.githubLink && (
                   <>
                     <p className="ml-2">
-                      -<span className="ml-2">GitHub</span>
+                      -
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-2 underline underline-offset-5"
+                      >
+                        GitHub
+                      </a>
                     </p>
                     <ArrowUpRight size={15} className="ml-1" />
                   </>
@@ -47,7 +74,6 @@ export const ProjectSection = () => {
             </div>
           ))}
         </div>
-        <div className="h-[100vh]" />
       </div>
     </div>
   );

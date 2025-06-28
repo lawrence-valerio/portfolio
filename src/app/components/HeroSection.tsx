@@ -18,7 +18,6 @@ export const HeroSection = () => {
               fun app, I enjoy turning ideas into things people can actually use
               and enjoy.`}
             </p>
-            <p></p>
           </div>
           <div className="flex items-center space-x-1 mb-9">
             <Heart />
