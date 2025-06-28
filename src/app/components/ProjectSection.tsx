@@ -30,7 +30,7 @@ export const ProjectSection = () => {
         <div className="mt-7">
           {projects.map((project) => (
             <div key={project.name} className="flex flex-col md:flex-row mt-6">
-              <p className="min-w-28 text-sm">{project.year}</p>
+              <p className="min-w-29 text-sm">{project.year}</p>
               <div className="flex flex-wrap">
                 {project.siteLink ? (
                   <a
