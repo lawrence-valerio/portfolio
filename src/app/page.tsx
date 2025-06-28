@@ -1,4 +1,5 @@
 import { HeroSection } from "./components/HeroSection";
+import { ProjectSection } from "./components/ProjectSection";
 import { TechSection } from "./components/TechSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <TechSection />
+      <ProjectSection />
     </div>
   );
 }

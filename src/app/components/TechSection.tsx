@@ -42,7 +42,6 @@ export const TechSection = () => {
             </div>
           ))}
         </div>
-        <div className="h-[100vh]" />
       </div>
     </div>
   );
