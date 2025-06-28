@@ -1,10 +1,52 @@
+import { ArrowUpRight } from "lucide-react";
+
+const projects = [
+  {
+    name: "FridgeMeals",
+    year: "2025",
+    description:
+      "A recipe suggestion site that uses the Spoonacular API to find recipes based on what's in your fridge",
+    siteLink: "https://fridge-meals.vercel.app/overview/home",
+    githubLink: "",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
+  },
+];
+
 export const ProjectSection = () => {
   return (
     <div className="relative z-0 pt-screen">
       <div className="mx-auto max-w-screen-sm py-3 px-6 darkmode-bg">
         <hr className="border-t border-gray-400 my-10" />
         <h2 className="text-xl font-bold">Projects</h2>
-        <div className="mt-7"></div>
+        {/* */}
+        <div className="mt-7">
+          {projects.map((project) => (
+            <div key={project.name} className="flex flex-col md:flex-row">
+              <p className="min-w-28 text-sm">{project.year}</p>
+              <div className="flex flex-wrap">
+                <p className="underline underline-offset-5">{project.name}</p>
+                {project.githubLink && (
+                  <>
+                    <p className="ml-2">
+                      -<span className="ml-2">GitHub</span>
+                    </p>
+                    <ArrowUpRight size={15} className="ml-1" />
+                  </>
+                )}
+                <p className="mt-2 text-sm text-gray-400">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap text-xs mt-2 gap-2">
+                  {project.techStack.map((tech) => (
+                    <p key={tech} className="rounded-full bg-white/5 px-2 py-1">
+                      {tech}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="h-[100vh]" />
       </div>
     </div>

@@ -10,7 +10,7 @@ import dotnetIcon from "../../../public/icons/dotnet.svg";
 
 const icons = [
   { name: "Next.js", icon: nextDotJSIcon },
-  { name: "Tailwind", icon: tailWindIcon },
+  { name: "Tailwind CSS", icon: tailWindIcon },
   { name: "React", icon: reactIcon },
   { name: "Typescript", icon: typescriptIcon },
   { name: "Three.js", icon: threejsIcon },
