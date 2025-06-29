@@ -56,6 +56,11 @@ export const ContactSection = () => {
               );
             })}
           </div>
+          <div className="flex justify-center">
+            <span className="text-xs text-gray-400">
+              © 2025 | Lawrence Valerio
+            </span>
+          </div>
         </motion.div>
       </div>
     </div>
