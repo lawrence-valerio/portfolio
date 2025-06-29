@@ -1,26 +1,18 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  if (!mounted) {
-    // Optionally render a placeholder or nothing
-    return (
-      <button className="p-2 rounded" aria-label="Toggle theme" disabled>
-        {/* Or a spinner, or nothing */}
-      </button>
-    );
-  }
+  if (!mounted) return null;
 
   return (
     <motion.div
@@ -29,12 +21,16 @@ export const ThemeToggle = () => {
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         className="p-2 rounded cursor-pointer"
         aria-label="Toggle theme"
       >
         <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-          {theme === "dark" ? <Sun /> : <Moon />}
+          {resolvedTheme === "dark" ? (
+            <Sun suppressHydrationWarning={true} />
+          ) : (
+            <Moon suppressHydrationWarning={true} />
+          )}
         </motion.div>
       </button>
     </motion.div>

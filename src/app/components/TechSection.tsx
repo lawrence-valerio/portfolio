@@ -26,7 +26,7 @@ export const TechSection = () => {
   return (
     <div className="relative z-0 pt-screen">
       <div className="mx-auto max-w-screen-sm px-6 bg-white darkmode-bg">
-        <div className="pointer-events-none absolute -top-48 h-48 left-0 w-full backdrop-blur-[2px] mask-to-t" />
+        <div className="pointer-events-none absolute -top-20 h-20 md:-top-48 md:h-48 left-0 w-full backdrop-blur-[2px] mask-to-t" />
         <motion.div
           initial={{ opacity: 0, scale: 0.75 }}
           animate={{ opacity: 1, scale: 1 }}
