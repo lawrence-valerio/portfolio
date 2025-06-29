@@ -39,7 +39,7 @@ export const ExperienceSection = () => {
             {experiences.map((experience) => (
               <div
                 key={experience.name}
-                className="flex flex-col md:flex-row mt-6"
+                className="flex flex-col md:flex-row mt-7"
               >
                 <time
                   className="min-w-29 text-sm"

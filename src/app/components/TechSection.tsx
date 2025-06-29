@@ -26,6 +26,7 @@ export const TechSection = () => {
   return (
     <div className="relative z-0 pt-screen">
       <div className="mx-auto max-w-screen-sm px-6 darkmode-bg">
+        <div className="pointer-events-none absolute -top-48 left-0 w-full h-48 backdrop-blur-[2px] mask-to-t" />
         <hr className="border-t border-gray-400 my-10" />
         <h2 className="text-xl font-bold">Technologies</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-7 pb-2">
