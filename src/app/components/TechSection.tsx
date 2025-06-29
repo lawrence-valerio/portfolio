@@ -27,24 +27,30 @@ export const TechSection = () => {
     <div className="relative z-0 pt-screen">
       <div className="mx-auto max-w-screen-sm px-6 darkmode-bg">
         <div className="pointer-events-none absolute -top-48 left-0 w-full h-48 backdrop-blur-[2px] mask-to-t" />
-        <hr className="border-t border-gray-400 my-10" />
-        <h2 className="text-xl font-bold">Technologies</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-7 pb-2">
-          {icons.map((icon) => (
-            <motion.div key={icon.name} whileHover={{ scale: 1.1 }}>
-              <div className="flex flex-col items-center p-4 rounded-lg bg-white/5">
-                <Image
-                  src={icon.icon}
-                  alt={icon.name}
-                  width={50}
-                  height={50}
-                  className="brightness-0 invert"
-                />
-                <span className="text-sm mt-4">{icon.name}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.75 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <hr className="border-t border-gray-400 my-10" />
+          <h2 className="text-xl font-bold">Technologies</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-7 pb-2">
+            {icons.map((icon) => (
+              <motion.div key={icon.name} whileHover={{ scale: 1.1 }}>
+                <div className="flex flex-col items-center p-4 rounded-lg bg-white/5">
+                  <Image
+                    src={icon.icon}
+                    alt={icon.name}
+                    width={50}
+                    height={50}
+                    className="brightness-0 invert"
+                  />
+                  <span className="text-sm mt-4">{icon.name}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );
