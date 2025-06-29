@@ -1,3 +1,4 @@
+import { ContactSection } from "./components/ContactSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { HeroSection } from "./components/HeroSection";
 import { ProjectSection } from "./components/ProjectSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <TechSection />
       <ProjectSection />
       <ExperienceSection />
+      <ContactSection />
     </div>
   );
 }

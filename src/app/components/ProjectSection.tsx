@@ -7,7 +7,7 @@ const projects = [
     description:
       "A recipe suggestion site that uses the Spoonacular API to find recipes based on what's in your fridge",
     siteLink: "https://fridge-meals.vercel.app/overview/home",
-    githubLink: "",
+    githubLink: "https://github.com/lawrence-valerio/fridge-meals",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
   {
@@ -30,7 +30,9 @@ export const ProjectSection = () => {
         <div className="mt-7">
           {projects.map((project) => (
             <div key={project.name} className="flex flex-col md:flex-row mt-6">
-              <p className="min-w-29 text-sm">{project.year}</p>
+              <time className="min-w-29 text-sm" dateTime={`${project.year}`}>
+                {project.year}
+              </time>
               <div className="flex flex-wrap">
                 {project.siteLink ? (
                   <a
@@ -42,11 +44,11 @@ export const ProjectSection = () => {
                     {project.name}
                   </a>
                 ) : (
-                  <p>{project.name}</p>
+                  <span>{project.name}</span>
                 )}
                 {project.githubLink && (
                   <>
-                    <p className="ml-2">
+                    <span className="ml-2">
                       -
                       <a
                         href={project.githubLink}
@@ -56,20 +58,23 @@ export const ProjectSection = () => {
                       >
                         GitHub
                       </a>
-                    </p>
+                    </span>
                     <ArrowUpRight size={15} className="ml-1" />
                   </>
                 )}
                 <p className="mt-2 text-sm text-gray-400">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap text-xs mt-2 gap-2">
+                <ul className="flex flex-wrap text-xs mt-2 gap-2">
                   {project.techStack.map((tech) => (
-                    <p key={tech} className="rounded-full bg-white/5 px-2 py-1">
+                    <li
+                      key={tech}
+                      className="rounded-full bg-white/5 px-2 py-1 hover:bg-white/3 transition-colors cursor-default"
+                    >
                       {tech}
-                    </p>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           ))}

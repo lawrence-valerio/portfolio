@@ -2,7 +2,7 @@ const experiences = [
   {
     name: "Rival Insurance Technology",
     position: "Software Developer",
-    yearStart: "2025",
+    yearStart: "2022",
     yearEnd: "Present",
     description:
       "Contributed to the development and maintenance of a Broker Management System (BMS) for insurance companies, improving system performance, and enhancing workflows",
@@ -11,8 +11,8 @@ const experiences = [
   {
     name: "Red River College",
     position: "Developer Intern",
-    yearStart: "2021",
-    yearEnd: "2021",
+    yearStart: "May",
+    yearEnd: "Aug 2021",
     description:
       "Built a 3D virtual reality web app that allows students to interact in a shared virtual space and attend immersive classes and meetings",
     techStack: ["React.js", "Three.js", "Blender"],
@@ -20,8 +20,8 @@ const experiences = [
   {
     name: "In Your Shoes",
     position: "Developer Intern",
-    yearStart: "2021",
-    yearEnd: "2021",
+    yearStart: "Jan",
+    yearEnd: "Apr 2021",
     description:
       "Redesigned and developed a responsive web app using React, Bootstrap, and Django, and adding a messaging feature for users to communicate",
     techStack: ["React.js", "Django"],
@@ -41,29 +41,32 @@ export const ExperienceSection = () => {
                 key={experience.name}
                 className="flex flex-col md:flex-row mt-6"
               >
-                <p className="min-w-29 text-sm">
+                <time
+                  className="min-w-29 text-sm"
+                  dateTime={`${experience.yearStart}-${experience.yearEnd}`}
+                >
                   {experience.yearStart} - {experience.yearEnd}
-                </p>
+                </time>
                 <div className="flex flex-wrap">
-                  <p>{experience.name}</p>
+                  <span>{experience.name}</span>
 
-                  <p className="ml-2">
+                  <span className="ml-2">
                     -<span className="ml-2">{experience.position}</span>
-                  </p>
+                  </span>
 
                   <p className="mt-2 text-sm text-gray-400">
                     {experience.description}
                   </p>
-                  <div className="flex flex-wrap text-xs mt-2 gap-2">
+                  <ul className="flex flex-wrap text-xs mt-2 gap-2">
                     {experience.techStack.map((tech) => (
-                      <p
+                      <li
                         key={tech}
-                        className="rounded-full bg-white/5 px-2 py-1"
+                        className="hover:bg-white/3 transition-colors rounded-full bg-white/5 px-2 py-1 cursor-default"
                       >
                         {tech}
-                      </p>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             ))}
