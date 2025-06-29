@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import picture from "../../../public/picture.png";
 import { ThemeToggle } from "./ThemeToggle";
+import { useEffect } from "react";
 
 const links = [
   {
@@ -26,6 +27,18 @@ const links = [
 ];
 
 export const HeroSection = () => {
+  useEffect(() => {
+    const appHeight = () => {
+      document.documentElement.style.setProperty(
+        "--app-height",
+        `${window.innerHeight}px`
+      );
+    };
+    window.addEventListener("resize", appHeight);
+    appHeight();
+    return () => window.removeEventListener("resize", appHeight);
+  }, []);
+
   return (
     <div className="sticky top-12 mx-auto h-full w-full max-w-7xl sm:top-16">
       <div className="relative flex h-[calc(100vh-5rem)] sm:h-[calc(100dvh-5rem)] w-full flex-col justify-center py-8 sm:min-h-[calc(100dvh-5rem)]">
