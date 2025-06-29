@@ -50,7 +50,7 @@ export const ProjectSection = () => {
                       href={project.siteLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline underline-offset-5"
+                      className="underline underline-offset-5 hover:decoration-gray-400"
                     >
                       {project.name}
                     </a>
@@ -65,7 +65,7 @@ export const ProjectSection = () => {
                           href={project.githubLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="ml-2 underline underline-offset-5"
+                          className="ml-2 underline underline-offset-5 hover:decoration-gray-400"
                         >
                           GitHub
                         </a>
