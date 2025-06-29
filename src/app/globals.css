@@ -2,8 +2,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 255 255 255;
+  --foreground: 17 24 39;
+}
+
+.dark {
+  --background: #18181b;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -13,12 +18,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #18181b;
     --foreground: #ededed;
   }
-}
+} */
 
 .mask-to-t {
   mask-image: linear-gradient(
@@ -38,6 +43,6 @@ body {
   color: #a3a3a3;
 }
 
-.darkmode-bg {
+html.dark .darkmode-bg {
   background: #18181b;
 }
