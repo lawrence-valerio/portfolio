@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import picture from "../../../public/picture.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   {
@@ -27,8 +28,9 @@ const links = [
 export const HeroSection = () => {
   return (
     <div className="sticky top-12 mx-auto h-full w-full max-w-7xl sm:top-16">
-      <div className="relative flex min-h-[calc(100dvh-5rem)] w-full flex-col justify-center py-8 sm:min-h-[calc(100dvh-5rem)]">
+      <div className="relative flex h-[calc(100vh-5rem)] sm:h-[calc(100dvh-5rem)] w-full flex-col justify-center py-8 sm:min-h-[calc(100dvh-5rem)]">
         <div className="mx-auto max-w-screen-sm px-6">
+          <ThemeToggle />
           <motion.div
             initial={{ opacity: 0, scale: 0.75 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -41,7 +43,7 @@ export const HeroSection = () => {
                 alt="Profile Picture"
                 width={150}
                 height={150}
-                className="block mx-auto rounded-full bg-white/5"
+                className="block mx-auto rounded-full bg-gray-300 darkmode-bg-white"
               />
             </div>
             <div className="flex items-center space-x-1 mb-7 mt-2">

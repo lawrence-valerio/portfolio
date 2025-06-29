@@ -27,7 +27,7 @@ const projects = [
 export const ProjectSection = () => {
   return (
     <div className="relative z-0 pt-screen">
-      <div className="mx-auto max-w-screen-sm py-3 px-6 darkmode-bg">
+      <div className="mx-auto max-w-screen-sm py-3 px-6 bg-white darkmode-bg">
         <motion.div
           initial={{ opacity: 0, scale: 0.75 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ export const ProjectSection = () => {
                       <ArrowUpRight size={15} className="ml-1" />
                     </>
                   )}
-                  <p className="mt-2 text-sm text-gray-400">
+                  <p className="mt-2 text-sm text-gray-600 darkmode-text-gray">
                     {project.description}
                   </p>
                   <ul className="flex flex-wrap text-xs mt-2 gap-2">

@@ -25,7 +25,7 @@ const links = [
 export const ContactSection = () => {
   return (
     <div className="relative z-0 pt-screen">
-      <div className="mx-auto max-w-screen-sm py-3 px-6 darkmode-bg">
+      <div className="mx-auto max-w-screen-sm py-3 px-6 bg-white darkmode-bg">
         <motion.div
           initial={{ opacity: 0, scale: 0.75 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -57,7 +57,7 @@ export const ContactSection = () => {
             })}
           </div>
           <div className="flex justify-center">
-            <span className="text-xs text-gray-400">
+            <span className="text-xs text-gray-600 darkmode-text-gray">
               © 2025 | Lawrence Valerio
             </span>
           </div>
