@@ -30,7 +30,7 @@ export const ThemeToggle = () => {
     >
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="p-2 rounded"
+        className="p-2 rounded cursor-pointer"
         aria-label="Toggle theme"
       >
         <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
