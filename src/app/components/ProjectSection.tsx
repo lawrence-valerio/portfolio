@@ -73,7 +73,7 @@ export const ProjectSection = () => {
                       <ArrowUpRight size={15} className="ml-1" />
                     </>
                   )}
-                  <p className="mt-2 text-sm text-gray-400">
+                  <p className="mt-2 text-sm text-gray-600 darkmode-text-gray">
                     {project.description}
                   </p>
                   <ul className="flex flex-wrap text-xs mt-2 gap-2">

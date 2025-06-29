@@ -37,13 +37,13 @@ export const TechSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-7 pb-2">
             {icons.map((icon) => (
               <motion.div key={icon.name} whileHover={{ scale: 1.1 }}>
-                <div className="flex flex-col items-center p-4 rounded-lg bg-white/5">
+                <div className="flex flex-col items-center p-4 rounded-lg bg-gray-300 darkmode-bg-white ">
                   <Image
                     src={icon.icon}
                     alt={icon.name}
                     width={50}
                     height={50}
-                    className="brightness-0 dark:invert-0"
+                    className="invert-0 darkmode-invert"
                   />
                   <span className="text-sm mt-4">{icon.name}</span>
                 </div>

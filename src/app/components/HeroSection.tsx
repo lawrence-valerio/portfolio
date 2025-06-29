@@ -43,7 +43,7 @@ export const HeroSection = () => {
                 alt="Profile Picture"
                 width={150}
                 height={150}
-                className="block mx-auto rounded-full bg-white/5"
+                className="block mx-auto rounded-full bg-gray-300 darkmode-bg-white"
               />
             </div>
             <div className="flex items-center space-x-1 mb-7 mt-2">

@@ -63,7 +63,7 @@ export const ExperienceSection = () => {
                       -<span className="ml-2">{experience.position}</span>
                     </span>
 
-                    <p className="mt-2 text-sm text-gray-400">
+                    <p className="mt-2 text-sm text-gray-600 darkmode-text-gray">
                       {experience.description}
                     </p>
                     <ul className="flex flex-wrap text-xs mt-2 gap-2">

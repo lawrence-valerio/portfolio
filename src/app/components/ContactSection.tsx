@@ -57,7 +57,7 @@ export const ContactSection = () => {
             })}
           </div>
           <div className="flex justify-center">
-            <span className="text-xs text-gray-400">
+            <span className="text-xs text-gray-600 darkmode-text-gray">
               © 2025 | Lawrence Valerio
             </span>
           </div>

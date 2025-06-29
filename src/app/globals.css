@@ -46,3 +46,15 @@ body {
 html.dark .darkmode-bg {
   background: #18181b;
 }
+
+html.dark .darkmode-invert {
+  filter: invert(1);
+}
+
+html.dark .darkmode-bg-white {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+html.dark .darkmode-text-gray {
+  color: rgb(156, 163, 175);
+}
