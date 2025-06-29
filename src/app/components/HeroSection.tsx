@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Heart, Github, Linkedin, Mail } from "lucide-react";
+import { MapPin, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -39,7 +39,7 @@ export const HeroSection = () => {
               className="block mx-auto rounded-full bg-white/5"
             />
           </div>
-          <div className="flex items-center space-x-1 mb-9 mt-2">
+          <div className="flex items-center space-x-1 mb-7 mt-2">
             <MapPin size={16} />
             <span className="text-xs">Manitoba</span>
           </div>
@@ -51,10 +51,6 @@ export const HeroSection = () => {
               fun app, I enjoy turning ideas into things people can actually use
               and enjoy.`}
             </p>
-          </div>
-          <div className="flex items-center space-x-1 mb-9">
-            <Heart />
-            <span>100</span>
           </div>
           <div className="flex items-center gap-4">
             {links.map((link) => {
