@@ -26,7 +26,7 @@ const projects = [
 
 export const ProjectSection = () => {
   return (
-    <div className="relative z-0 pt-screen">
+    <div className="relative z-10 pt-screen">
       <div className="mx-auto max-w-screen-sm py-3 px-6 bg-white darkmode-bg">
         <motion.div
           initial={{ opacity: 0, scale: 0.75 }}
