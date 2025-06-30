@@ -8,7 +8,9 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <TechSection />
+      <div className="relative z-10 mt-[100dvh]">
+        <TechSection />
+      </div>
       <ProjectSection />
       <ExperienceSection />
       <ContactSection />

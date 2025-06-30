@@ -27,8 +27,8 @@ const links = [
 
 export const HeroSection = () => {
   return (
-    <div className="sticky top-12 mx-auto h-full w-full max-w-7xl sm:top-16 bg-white darkmode-bg z-0">
-      <div className="relative flex h-[calc(100vh-5rem)] sm:h-[calc(100dvh-5rem)] w-full flex-col justify-center py-8 sm:min-h-[calc(100dvh-5rem)]">
+    <div className="fixed inset-0 top-12 sm:top-16 z-0 bg-white darkmode-bg">
+      <div className="relative flex h-[calc(100dvh-5rem)] w-full flex-col justify-center py-8">
         <div className="mx-auto max-w-screen-sm px-6">
           <ThemeToggle />
           <motion.div
