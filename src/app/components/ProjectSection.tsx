@@ -80,7 +80,7 @@ export const ProjectSection = () => {
                     {project.techStack.map((tech) => (
                       <li
                         key={tech}
-                        className="rounded-full bg-white/5 px-2 py-1 hover:bg-white/3 transition-colors cursor-default"
+                        className="rounded-full bg-gray-300 hover:bg-gray-400 darkmode-bg-white darkmode-bg-hover px-2 py-1 transition-colors cursor-default"
                       >
                         {tech}
                       </li>

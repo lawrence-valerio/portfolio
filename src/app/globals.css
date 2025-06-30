@@ -26,6 +26,12 @@
 } */
 
 .mask-to-t {
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
   mask-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 0%,
@@ -33,6 +39,7 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -53,6 +60,10 @@ html.dark .darkmode-invert {
 
 html.dark .darkmode-bg-white {
   background: rgba(255, 255, 255, 0.05);
+}
+
+html.dark .darkmode-bg-hover:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 html.dark .darkmode-text-gray {
