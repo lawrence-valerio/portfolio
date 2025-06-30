@@ -70,7 +70,7 @@ export const ExperienceSection = () => {
                       {experience.techStack.map((tech) => (
                         <li
                           key={tech}
-                          className="hover:bg-white/3 transition-colors rounded-full bg-white/5 px-2 py-1 cursor-default"
+                          className="rounded-full bg-gray-300 hover:bg-gray-400 darkmode-bg-white darkmode-bg-hover px-2 py-1 transition-colors cursor-default"
                         >
                           {tech}
                         </li>
